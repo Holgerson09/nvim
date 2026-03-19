@@ -1,19 +1,23 @@
 local M = {}
 
 M.servers = {
-    'pyright',
-    'ts_ls',
-    'rust_analyzer',
     'clangd',
-    'jsonls',
-    'emmet_language_server',
-    'html',
-    'spyglassmc_language_server',
-    'lua_ls',
-    'dockerls',
     'docker_compose_language_service',
+    'dockerls',
+    'emmet_language_server',
+    'gopls',
+    'groovyls',
+    'html',
+    'jsonls',
+    'lua_ls',
+    'neocmake',
+    'pyright',
+    'rust_analyzer',
+    'spyglassmc_language_server',
+    'ts_ls',
+    'yamlls',
     'zls',
-    'angularls',
+    'cssls',
 }
 
 M.setup = function()
@@ -27,6 +31,12 @@ M.setup = function()
     vim.api.nvim_create_autocmd('LspAttach', {
         group = vim.api.nvim_create_augroup('UserLspConfig', {}),
         callback = function(ev)
+            local client = vim.lsp.get_client_by_id(ev.data.client_id)
+
+            if client then
+                client.server_capabilities.semanticTokensProvider = nil
+            end
+
             local set = vim.keymap.set
             local opts = { buffer = ev.buf, noremap = true, silent = true }
 

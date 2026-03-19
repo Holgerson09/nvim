@@ -4,32 +4,33 @@ return {
     build = ':TSUpdate',
     config = function()
         require('nvim-treesitter').install({
-            'javascript',
-            'typescript',
-            'tsx',
             'c',
+            'cmake',
             'cpp',
+            'css',
+            'go',
+            'groovy',
+            'html',
+            'java',
+            'javascript',
+            'json',
+            'kotlin',
             'lua',
-            'vim',
-            'vimdoc',
-            'query',
             'markdown',
             'markdown_inline',
-            'html',
-            'css',
-            'json',
+            'query',
+            'tsx',
+            'typescript',
+            'vim',
+            'vimdoc',
+            'yaml',
+            'zig',
         })
 
         vim.api.nvim_create_autocmd('FileType', {
-            callback = function(ev)
-                local ft = vim.bo[ev.buf].filetype
-                local lang = vim.treesitter.language.get_lang(ft) or ft
-                local has_parser = pcall(vim.treesitter.get_parser, ev.buf, lang)
-
-                if has_parser then
-                    vim.treesitter.start()
-                end
-            end
+            callback = function()
+                pcall(vim.treesitter.start)
+            end,
         })
     end,
 }

@@ -25,7 +25,9 @@ opt.incsearch = true
 
 opt.termguicolors = true
 opt.scrolloff = 8
+opt.scrollbind = false
 opt.signcolumn = 'yes'
+-- opt.colorcolumn = '120'
 opt.isfname:append('@-@')
 
 opt.updatetime = 50

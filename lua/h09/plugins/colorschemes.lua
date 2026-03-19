@@ -1,10 +1,17 @@
 return {
-    'catppuccin/nvim',
-    'dracula/vim',
-    'gummesson/stereokai.vim',
-    'loctvl842/monokai-pro.nvim',
-    'gbprod/nord.nvim',
-    'olimorris/onedarkpro.nvim',
-    'rose-pine/vim',
+    {
+        'dracula/vim',
+        name = 'dracula',
+    },
+    {
+        'rose-pine/vim',
+        name = 'rose-pine',
+    },
     'sainnhe/sonokai',
+    'morhetz/gruvbox',
+    'folke/tokyonight.nvim',
+    'loctvl842/monokai-pro.nvim',
+    'ayu-theme/ayu-vim',
+    'drewtempelmeyer/palenight.vim',
+    'rakr/vim-one',
 }

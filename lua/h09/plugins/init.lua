@@ -11,6 +11,6 @@ return {
         },
         config = function()
             require('h09.lsp').setup()
-        end
-    }
+        end,
+    },
 }

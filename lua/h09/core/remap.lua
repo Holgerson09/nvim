@@ -3,7 +3,6 @@ vim.g.mapleader = ' '
 local keymap = vim.keymap
 
 keymap.set('n', '<leader>ee', ':Yazi<cr>')
--- keymap.set('n', '<leader>eo', ':Oil<cr>')
 
 keymap.set('n', '<leader>sv', ':vsplit<cr>')
 keymap.set('n', '<leader>sh', ':split<cr>')
@@ -39,6 +38,16 @@ keymap.set('n', '<leader>cx', vim.cmd.cclose)
 
 keymap.set('t', '<C-q>', '<C-\\><C-n>')
 
+-- Umlaute keybinds
+local function set_umlaut(char, result)
+    keymap.set('i', '<A-u>' .. char, result, { noremap = true })
+end
 
--- TEMP keybinds
-keymap.set('n', '<leader>fd', ':find ')
+set_umlaut('a', 'ä')
+set_umlaut('o', 'ö')
+set_umlaut('u', 'ü')
+set_umlaut('e', 'ë')
+set_umlaut('i', 'ï')
+set_umlaut('A', 'Ä')
+set_umlaut('O', 'Ö')
+set_umlaut('U', 'Ü')

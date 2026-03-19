@@ -14,6 +14,7 @@ return {
                 rust = { 'rustfmt' },
                 c = { 'clang-format' },
                 cpp = { 'clang-format' },
+                java = { 'clang-format' },
             },
         })
     end,

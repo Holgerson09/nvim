@@ -4,14 +4,15 @@ return {
             runtime = {
                 version = 'LuaJIT',
             },
-            diagnostics = {
-                globals = { 'vim' },
-            },
             workspace = {
                 checkThirdParty = false,
+                library = {},
             },
             telemetry = {
                 enable = false,
+            },
+            completion = {
+                callSnippet = 'Replace',
             },
         },
     },
