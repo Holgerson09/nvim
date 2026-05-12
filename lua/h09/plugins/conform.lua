@@ -4,7 +4,7 @@ return {
         require('conform').setup({
             formatters_by_ft = {
                 lua = { 'stylua' },
-                python = { 'isort', 'black' },
+                python = { 'ruff_organize_imports', 'ruff_format' },
                 javascript = { 'prettier' },
                 typescript = { 'prettier' },
                 html = { 'prettier' },
@@ -14,7 +14,10 @@ return {
                 rust = { 'rustfmt' },
                 c = { 'clang-format' },
                 cpp = { 'clang-format' },
-                java = { 'clang-format' },
+                yaml = { 'prettier' },
+            },
+            default_format_opts = {
+                lsp_format = 'fallback',
             },
         })
     end,

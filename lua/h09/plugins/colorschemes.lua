@@ -13,5 +13,5 @@ return {
     'loctvl842/monokai-pro.nvim',
     'ayu-theme/ayu-vim',
     'drewtempelmeyer/palenight.vim',
-    'rakr/vim-one',
+    'olimorris/onedarkpro.nvim',
 }

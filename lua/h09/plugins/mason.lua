@@ -27,11 +27,11 @@ return {
         mason_tool_installer.setup({
             ensure_installed = {
                 'stylua',
-                'black',
-                'isort',
+                'ruff',
                 'prettier',
                 'shfmt',
                 'clang-format',
+                'taplo',
             },
             auto_update = false,
             automatic_installation = true,

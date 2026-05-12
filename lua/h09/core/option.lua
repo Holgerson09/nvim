@@ -4,7 +4,6 @@ opt.relativenumber = true
 opt.number = true
 opt.wrap = false
 opt.cursorline = true
-opt.guicursor = ''
 opt.linebreak = true
 
 opt.tabstop = 4
@@ -25,9 +24,8 @@ opt.incsearch = true
 
 opt.termguicolors = true
 opt.scrolloff = 8
-opt.scrollbind = false
+opt.mouse = ''
 opt.signcolumn = 'yes'
--- opt.colorcolumn = '120'
 opt.isfname:append('@-@')
 
 opt.updatetime = 50
@@ -39,9 +37,3 @@ opt.autochdir = false
 opt.iskeyword:append('-')
 opt.path:append('**')
 opt.background = 'dark'
-
-vim.filetype.add({
-    extension = {
-        mcfunction = 'mcfunction',
-    },
-})

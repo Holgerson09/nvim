@@ -1,19 +1,17 @@
 local M = {}
 
 M.servers = {
+    'angularls',
     'clangd',
     'docker_compose_language_service',
     'dockerls',
     'emmet_language_server',
-    'gopls',
-    'groovyls',
     'html',
     'jsonls',
     'lua_ls',
     'neocmake',
     'pyright',
     'rust_analyzer',
-    'spyglassmc_language_server',
     'ts_ls',
     'yamlls',
     'zls',
@@ -46,7 +44,7 @@ M.setup = function()
             set('n', 'gt', ':Telescope lsp_type_definitions<cr>', opts)
             set({ 'n', 'v' }, '<leader>ca', vim.lsp.buf.code_action, opts)
             set('n', '<leader>rn', vim.lsp.buf.rename, opts)
-            set('n', '<leader>rs', ':LspRestart<cr>', opts)
+            set('n', '<leader>rs', ':lsp restart<cr>', opts)
 
             set('n', 'K', function()
                 vim.lsp.buf.hover({ border = 'rounded' })
