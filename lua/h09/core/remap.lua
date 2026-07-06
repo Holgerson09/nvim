@@ -34,18 +34,7 @@ keymap.set('n', '<leader>cn', vim.cmd.cnext)
 keymap.set('n', '<leader>cp', vim.cmd.cprevious)
 keymap.set('n', '<leader>cx', vim.cmd.cclose)
 
+keymap.set('i', '<C-a>', '<C-o>^', { noremap = true, silent = true })
+keymap.set('i', '<C-e>', '<C-o>$', { noremap = true, silent = true })
+
 keymap.set('t', '<C-q>', '<C-\\><C-n>')
-
--- Umlaute keybinds
-local function set_umlaut(char, result)
-    keymap.set('i', '<A-u>' .. char, result, { noremap = true })
-end
-
-set_umlaut('a', 'ä')
-set_umlaut('o', 'ö')
-set_umlaut('u', 'ü')
-set_umlaut('e', 'ë')
-set_umlaut('i', 'ï')
-set_umlaut('A', 'Ä')
-set_umlaut('O', 'Ö')
-set_umlaut('U', 'Ü')
