@@ -51,7 +51,7 @@ M.setup = function()
             end, opts)
 
             set('n', '<leader>F', function()
-                require('conform').format({ async = true })
+                require('conform').format({ async = true, lsp_format = 'fallback' })
             end, opts)
 
             set('n', '<leader>E', function()
