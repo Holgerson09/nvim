@@ -2,8 +2,6 @@ vim.g.mapleader = ' '
 
 local keymap = vim.keymap
 
-keymap.set('n', '<leader>ee', ':Yazi<cr>')
-
 keymap.set('n', '<leader>sv', ':vsplit<cr>')
 keymap.set('n', '<leader>sh', ':split<cr>')
 keymap.set('n', '<leader>se', ':wincmd =<cr>')
