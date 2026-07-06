@@ -1,3 +1,7 @@
 require('h09.core')
 require('h09.lazy')
-vim.cmd.colorscheme('tokyonight-night')
+
+require('h09.additions.color').setup({
+    scheme = 'tokyonight-night',
+    transparent = false,
+})

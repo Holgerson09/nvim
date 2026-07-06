@@ -1,4 +1,5 @@
 return {
+    event = 'VimEnter',
     {
         'dracula/vim',
         name = 'dracula',
@@ -7,11 +8,17 @@ return {
         'rose-pine/vim',
         name = 'rose-pine',
     },
-    'sainnhe/sonokai',
-    'morhetz/gruvbox',
+    {
+        'nordtheme/vim',
+        name = 'nord',
+    },
     'folke/tokyonight.nvim',
     'loctvl842/monokai-pro.nvim',
     'ayu-theme/ayu-vim',
     'drewtempelmeyer/palenight.vim',
     'olimorris/onedarkpro.nvim',
+    'rebelot/kanagawa.nvim',
+    'projekt0n/github-nvim-theme',
+    'sainnhe/gruvbox-material',
+    'morhetz/gruvbox',
 }
