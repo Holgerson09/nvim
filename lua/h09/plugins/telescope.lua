@@ -22,13 +22,12 @@ return {
         keymap.set('n', '<leader>fw', function()
             local search_string = vim.fn.input('Grep > ')
             if search_string ~= '' then
-                require('telescope.builtin').grep_string({
+                builtin.grep_string({
                     search = search_string,
                 })
             end
         end)
 
-        -- Search Files in NEOVIM Config
         keymap.set('n', '<leader>fn', function()
             require('telescope.builtin').find_files({
                 cwd = vim.fn.stdpath('config'),

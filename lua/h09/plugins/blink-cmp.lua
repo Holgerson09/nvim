@@ -7,7 +7,9 @@ return {
         appearance = {
             nerd_font_variant = 'mono',
         },
-        completion = { documentation = { auto_show = true } },
+        completion = {
+            documentation = { auto_show = false },
+        },
         fuzzy = { implementation = 'prefer_rust' },
     },
     opts_extend = { 'sources.default' },

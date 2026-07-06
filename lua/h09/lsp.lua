@@ -20,10 +20,11 @@ M.servers = {
 
 M.setup = function()
     vim.diagnostic.config({
-        virtual_text = false,
+        severity_sort = true,
+        signs = false,
         underline = true,
         update_in_insert = false,
-        severity_sort = true,
+        virtual_text = false,
     })
 
     vim.api.nvim_create_autocmd('LspAttach', {
