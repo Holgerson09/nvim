@@ -2,20 +2,23 @@ local M = {}
 
 M.servers = {
     'angularls',
+    'asm_lsp',
     'clangd',
+    'cssls',
     'docker_compose_language_service',
     'dockerls',
     'emmet_language_server',
+    'gopls',
     'html',
     'jsonls',
     'lua_ls',
     'neocmake',
     'pyright',
+    'roslyn_ls',
     'rust_analyzer',
     'ts_ls',
     'yamlls',
     'zls',
-    'cssls',
 }
 
 M.setup = function()

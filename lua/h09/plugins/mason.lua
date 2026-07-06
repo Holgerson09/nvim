@@ -26,12 +26,14 @@ return {
 
         mason_tool_installer.setup({
             ensure_installed = {
-                'stylua',
+                'asmfmt',
                 'c3-lsp',
-                'ruff',
-                'prettier',
-                'shfmt',
                 'clang-format',
+                'fourmolu',
+                'prettier',
+                'ruff',
+                'shfmt',
+                'stylua',
                 'taplo',
             },
             auto_update = false,
