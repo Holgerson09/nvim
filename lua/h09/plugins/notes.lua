@@ -8,11 +8,9 @@ return {
             checkbox = {
                 unchecked = {
                     icon = '󰄱',
-                    highlight = 'ObsidianTodo',
                 },
                 checked = {
                     icon = '󰄲',
-                    highlight = 'ObsidianDone',
                 },
             },
             bullet = {
