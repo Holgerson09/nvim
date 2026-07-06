@@ -7,19 +7,19 @@ return {
 
         local keymap = vim.keymap
 
-        keymap.set('n', '<leader>a', mark.add_file)
-        keymap.set('n', '<C-e>', ui.toggle_quick_menu)
+        keymap.set('n', '<leader>ja', mark.add_file)
+        keymap.set('n', '<leader>jo', ui.toggle_quick_menu)
 
-        keymap.set('n', '<C-i>', function()
+        keymap.set('n', '<leader>jj', function()
             ui.nav_file(1)
         end)
-        keymap.set('n', '<C-t>', function()
+        keymap.set('n', '<leader>jk', function()
             ui.nav_file(2)
         end)
-        keymap.set('n', '<C-n>', function()
+        keymap.set('n', '<leader>jl', function()
             ui.nav_file(3)
         end)
-        keymap.set('n', '<C-s>', function()
+        keymap.set('n', '<leader>j;', function()
             ui.nav_file(4)
         end)
     end,
