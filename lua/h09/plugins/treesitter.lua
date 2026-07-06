@@ -5,6 +5,7 @@ return {
     config = function()
         require('nvim-treesitter').install({
             'c',
+            'c3',
             'cmake',
             'cpp',
             'css',

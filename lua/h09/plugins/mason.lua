@@ -27,6 +27,7 @@ return {
         mason_tool_installer.setup({
             ensure_installed = {
                 'stylua',
+                'c3-lsp',
                 'ruff',
                 'prettier',
                 'shfmt',

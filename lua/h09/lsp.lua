@@ -71,6 +71,7 @@ M.setup = function()
     })
 
     vim.lsp.enable(M.servers)
+    vim.lsp.enable('c3_lsp')
 end
 
 return M
