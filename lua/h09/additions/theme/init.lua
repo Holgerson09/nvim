@@ -1,9 +1,9 @@
 local M = {}
 
 ---@class SchemeConfig
----@field theme string
----@field transparent boolean
----@field default_keybinds boolean
+---@field theme? string
+---@field transparent? boolean
+---@field default_keybinds? boolean
 
 ---@type SchemeConfig
 local defaults = {
