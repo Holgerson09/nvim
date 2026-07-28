@@ -21,4 +21,6 @@ return {
     'projekt0n/github-nvim-theme',
     'sainnhe/gruvbox-material',
     'morhetz/gruvbox',
+    'tomasr/molokai',
+    'benjaminwhite/benokai'
 }
