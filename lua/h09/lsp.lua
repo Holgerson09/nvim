@@ -2,7 +2,6 @@ local M = {}
 
 M.servers = {
     'angularls',
-    'asm_lsp',
     'clangd',
     'cssls',
     'docker_compose_language_service',
