@@ -1,8 +1,9 @@
 return {
     'saghen/blink.cmp',
-    dependencies = { 'rafamadriz/friendly-snippets' },
+    dependencies = { 'L3MON4D3/LuaSnip', version = 'v2.*' },
     version = 'v1.*',
     opts = {
+        snippets = { preset = 'luasnip' },
         keymap = { preset = 'default' },
         appearance = {
             nerd_font_variant = 'mono',
@@ -12,5 +13,4 @@ return {
         },
         fuzzy = { implementation = 'prefer_rust' },
     },
-    opts_extend = { 'sources.default' },
 }
