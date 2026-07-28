@@ -1,14 +1,4 @@
-M = {}
-
----@class SchemeConfig
----@field scheme string
----@field transparent boolean
-
----@type SchemeConfig
-local defaults = {
-    scheme = 'tokyonight-night',
-    transparent = true,
-}
+local M = {}
 
 local groups = {
     'Normal',
@@ -44,12 +34,13 @@ local groups = {
     'markdownCodeBlock',
 }
 
----@param opts SchemeConfig
-M.setup = function(opts)
-    opts = opts or defaults
+---@param theme string
+---@param transparent? boolean
+M.set_theme = function(theme, transparent)
+    transparent = transparent or vim.g.theme_transparent
 
-    vim.cmd.colorscheme(opts.scheme)
-    if opts.transparent then
+    vim.cmd.colorscheme(theme)
+    if transparent then
         M.clear_background()
     end
 end
