@@ -12,6 +12,10 @@ return {
         'nordtheme/vim',
         name = 'nord',
     },
+    {
+        'challenger-deep-theme/vim',
+        name = 'challenger-deep',
+    },
     'folke/tokyonight.nvim',
     'loctvl842/monokai-pro.nvim',
     'ayu-theme/ayu-vim',
@@ -22,5 +26,18 @@ return {
     'sainnhe/gruvbox-material',
     'morhetz/gruvbox',
     'tomasr/molokai',
-    'benjaminwhite/benokai'
+    'benjaminwhite/benokai',
+    'EdenEast/nightfox.nvim',
+    'ntbbloodbath/doom-one.nvim',
+    'armannikoyan/rusty',
+    'vague-theme/vague.nvim',
+    'romainl/flattened',
+    'whatyouhide/vim-gotham',
+    'yorickpeterse/happy_hacking.vim',
+    'cocopon/iceberg.vim',
+    'dikiaap/minimalist',
+    'mhartington/oceanic-next',
+    'rakr/vim-two-firewatch',
+
+    'https://codeberg.org/Brargenzilian/darcula-solid.nvim',
 }
