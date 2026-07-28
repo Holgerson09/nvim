@@ -49,6 +49,7 @@ M.setup = function()
 
             local set = vim.keymap.set
             local opts = { buffer = ev.buf, noremap = true, silent = true }
+            local settings = require('h09.settings')
 
             set('n', 'gR', ':Telescope lsp_references<cr>', opts)
             set('n', 'gr', vim.lsp.buf.references, opts)
@@ -59,7 +60,7 @@ M.setup = function()
             set('n', '<leader>rs', ':lsp restart<cr>', opts)
 
             set('n', 'K', function()
-                vim.lsp.buf.hover({ border = 'rounded' })
+                vim.lsp.buf.hover({ border = settings.border })
             end, opts)
 
             set('n', '<leader>F', function()
@@ -67,7 +68,7 @@ M.setup = function()
             end, opts)
 
             set('n', '<leader>E', function()
-                vim.diagnostic.open_float({ border = 'rounded' })
+                vim.diagnostic.open_float({ border = settings.border })
             end, opts)
         end,
     })

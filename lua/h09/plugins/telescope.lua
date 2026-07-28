@@ -6,10 +6,18 @@ return {
         { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
     },
     config = function()
+        local settings = require('h09.settings')
         local telescope = require('telescope')
         local builtin = require('telescope.builtin')
 
         telescope.load_extension('fzf')
+
+        telescope.setup({
+            defaults = {
+                border = true,
+                borderchars = settings.borderchars[settings.border],
+            },
+        })
 
         local keymap = vim.keymap
 
