@@ -9,6 +9,8 @@ return {
         local mason_lspconfig = require('mason-lspconfig')
         local mason_tool_installer = require('mason-tool-installer')
 
+        local lsp = require('h09.lsp')
+
         mason.setup({
             ui = {
                 icons = {
@@ -20,21 +22,12 @@ return {
         })
 
         mason_lspconfig.setup({
-            ensure_installed = require('h09.lsp').servers,
+            ensure_installed = lsp.servers,
             automatic_installation = true,
         })
 
         mason_tool_installer.setup({
-            ensure_installed = {
-                'c3-lsp',
-                'clang-format',
-                'fourmolu',
-                'prettier',
-                'ruff',
-                'shfmt',
-                'stylua',
-                'taplo',
-            },
+            ensure_installed = lsp.packages,
             auto_update = false,
             automatic_installation = true,
         })

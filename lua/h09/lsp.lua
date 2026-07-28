@@ -14,19 +14,28 @@ M.servers = {
     'neocmake',
     'pyright',
     'roslyn_ls',
-    'rust_analyzer',
     'ts_ls',
     'yamlls',
-    'zls',
+}
+
+M.packages = {
+    'c3-lsp',
+    'clang-format',
+    'fourmolu',
+    'prettier',
+    'ruff',
+    'shfmt',
+    'stylua',
+    'taplo',
 }
 
 M.setup = function()
     vim.diagnostic.config({
         severity_sort = true,
-        signs = false,
+        signs = true,
         underline = true,
         update_in_insert = false,
-        virtual_text = true,
+        virtual_text = false,
     })
 
     vim.api.nvim_create_autocmd('LspAttach', {
@@ -73,7 +82,12 @@ M.setup = function()
     })
 
     vim.lsp.enable(M.servers)
-    vim.lsp.enable('c3_lsp')
+    vim.lsp.enable({
+        'c3_lsp',
+        'hls',
+        'rust_analyzer',
+        'zls',
+    })
 end
 
 return M
