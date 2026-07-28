@@ -1,26 +1,34 @@
 return {
     'theprimeagen/harpoon',
+    branch = 'harpoon2',
+    dependencies = { 'nvim-lua/plenary.nvim' },
     event = 'VimEnter',
     config = function()
-        local mark = require('harpoon.mark')
-        local ui = require('harpoon.ui')
+        local harpoon = require('harpoon')
+        harpoon:setup()
 
-        local keymap = vim.keymap
+        vim.keymap.set('n', '<leader>jh', function()
+            harpoon:list():add()
+        end)
+        vim.keymap.set('n', '<leader>jo', function()
+            harpoon.ui:toggle_quick_menu(harpoon:list())
+        end)
 
-        keymap.set('n', '<leader>ja', mark.add_file)
-        keymap.set('n', '<leader>jo', ui.toggle_quick_menu)
+        local keys = {
+            'jj',
+            'jk',
+            'jl',
+            'j;',
+            'jf',
+            'jd',
+            'js',
+            'ja',
+        }
 
-        keymap.set('n', '<leader>jj', function()
-            ui.nav_file(1)
-        end)
-        keymap.set('n', '<leader>jk', function()
-            ui.nav_file(2)
-        end)
-        keymap.set('n', '<leader>jl', function()
-            ui.nav_file(3)
-        end)
-        keymap.set('n', '<leader>j;', function()
-            ui.nav_file(4)
-        end)
+        for i, value in ipairs(keys) do
+            vim.keymap.set('n', '<leader>' .. value, function()
+                harpoon:list():select(i)
+            end)
+        end
     end,
 }
