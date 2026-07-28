@@ -26,7 +26,7 @@ M.setup = function()
         signs = false,
         underline = true,
         update_in_insert = false,
-        virtual_text = false,
+        virtual_text = true,
     })
 
     vim.api.nvim_create_autocmd('LspAttach', {

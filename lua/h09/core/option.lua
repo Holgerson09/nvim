@@ -3,8 +3,9 @@ local opt = vim.opt
 opt.relativenumber = true
 opt.number = true
 opt.wrap = false
-opt.cursorline = false
+opt.cursorline = true
 opt.linebreak = true
+opt.colorcolumn = '120'
 
 opt.tabstop = 4
 opt.softtabstop = 4

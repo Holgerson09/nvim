@@ -6,7 +6,6 @@ return {
             },
             workspace = {
                 checkThirdParty = false,
-                library = {},
             },
             telemetry = {
                 enable = false,
